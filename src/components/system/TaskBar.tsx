@@ -1,11 +1,12 @@
 import { Col, Container, Row } from "react-bootstrap";
+import MetamaskLogo from "./assets/MetamaskLogo.svg";
 
 const TaskBar = () => {
 	return (
-		<Container fluid className="border-top" style={{ height: "6%" }}>
+		<Container fluid className="border-top" style={{ height: "5%" }}>
 			<Row className="h-100">
-				<Col id="menu" sm={1} className="h-100 d-flex align-items-center justify-content-center">
-					<button className="h-100 w-100">menu</button>
+				<Col id="menu" sm={1} className="h-100 d-flex align-items-center justify-content-center border-end">
+					<button className="h-100 w-100">Digital Threat</button>
 				</Col>
 				<Col id="appsBar" sm={9} className="h-100 d-flex align-items-center justify-content-start">
 					<div className="d-flex justify-content-center h-100">
@@ -15,8 +16,24 @@ const TaskBar = () => {
 						<button>app4</button>
 					</div>
 				</Col>
-				<Col id="info" sm={2} className="h-100 d-flex align-items-center justify-content-center">
-					hora | fecha | whatever
+				<Col
+					id="walletAndData"
+					sm={2}
+					className="h-100 d-flex align-items-center justify-content-center border-start"
+				>
+					<Container fluid className="h-100">
+						<Row className="h-100">
+							<Col sm={6} className="h-100 border d-flex align-items-center justify-content-center">
+								<span>fecha | hora</span>
+							</Col>
+							<Col sm={6} className="h-100 border d-flex align-items-center justify-content-center">
+								{" "}
+								<button className="w-100 h-100 bg-dark border-none outline-none">
+									<img src={MetamaskLogo} alt="Metamask Logo" />
+								</button>
+							</Col>
+						</Row>
+					</Container>
 				</Col>
 			</Row>
 		</Container>
