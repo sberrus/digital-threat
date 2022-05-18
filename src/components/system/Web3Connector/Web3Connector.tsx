@@ -14,7 +14,8 @@ const Web3Connector = () => {
 				onClick={() => {
 					alert();
 				}}
-				className="w-100 h-100 bg-dark border-none"
+				className="w-auto h-100 bg-dark"
+				style={{ border: "none" }}
 			>
 				<img src={MetamaskLogo} alt="Metamask Logo" />
 			</button>

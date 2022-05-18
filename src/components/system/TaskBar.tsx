@@ -6,9 +6,16 @@ const TaskBar = () => {
 		<Container fluid className="border-top" style={{ height: "5%" }}>
 			<Row className="h-100">
 				<Col id="menu" sm={1} className="h-100 d-flex align-items-center justify-content-center border-end">
-					<button className="h-100 w-100">Digital Threat</button>
+					<button className="h-100 w-100">DT</button>
 				</Col>
-				<Col id="appsBar" sm={9} className="h-100 d-flex align-items-center justify-content-start">
+				<Col
+					id="appsBar"
+					sm={5}
+					md={7}
+					lg={8}
+					xl={9}
+					className="h-100 d-flex align-items-center justify-content-start"
+				>
 					<div className="d-flex justify-content-center h-100">
 						<button>app1</button>
 						<button>app2</button>
@@ -18,15 +25,18 @@ const TaskBar = () => {
 				</Col>
 				<Col
 					id="walletAndData"
-					sm={2}
+					sm={6}
+					md={4}
+					lg={3}
+					xl={2}
 					className="h-100 d-flex align-items-center justify-content-center border-start"
 				>
 					<Container fluid className="h-100">
 						<Row className="h-100">
-							<Col sm={6} className="h-100 d-flex align-items-center justify-content-center">
-								<span>fecha | hora</span>
+							<Col sm={9} className="h-100 d-flex align-items-center justify-content-center">
+								<span>fecha</span>
 							</Col>
-							<Col sm={6} className="h-100 d-flex align-items-center justify-content-center">
+							<Col sm={3} className="h-100 d-flex align-items-center justify-content-center">
 								{" "}
 								<Web3Connector />
 							</Col>
