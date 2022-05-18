@@ -1,5 +1,5 @@
 import { Col, Container, Row } from "react-bootstrap";
-import MetamaskLogo from "./assets/MetamaskLogo.svg";
+import Web3Connector from "./Web3Connector/Web3Connector";
 
 const TaskBar = () => {
 	return (
@@ -23,14 +23,12 @@ const TaskBar = () => {
 				>
 					<Container fluid className="h-100">
 						<Row className="h-100">
-							<Col sm={6} className="h-100 border d-flex align-items-center justify-content-center">
+							<Col sm={6} className="h-100 d-flex align-items-center justify-content-center">
 								<span>fecha | hora</span>
 							</Col>
-							<Col sm={6} className="h-100 border d-flex align-items-center justify-content-center">
+							<Col sm={6} className="h-100 d-flex align-items-center justify-content-center">
 								{" "}
-								<button className="w-100 h-100 bg-dark border-none outline-none">
-									<img src={MetamaskLogo} alt="Metamask Logo" />
-								</button>
+								<Web3Connector />
 							</Col>
 						</Row>
 					</Container>
