@@ -1,4 +1,5 @@
 import { Col, Container, Row } from "react-bootstrap";
+import MainMenu from "./MainMenu/MainMenu";
 import Web3Connector from "./Web3Connector/Web3Connector";
 
 const TaskBar = () => {
@@ -6,7 +7,7 @@ const TaskBar = () => {
 		<Container fluid className="border-top" style={{ height: "5%" }}>
 			<Row className="h-100">
 				<Col id="menu" sm={1} className="h-100 d-flex align-items-center justify-content-center border-end">
-					<button className="h-100 w-100">DT</button>
+					<MainMenu />
 				</Col>
 				<Col
 					id="appsBar"

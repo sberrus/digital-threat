@@ -12,7 +12,7 @@ const Web3AuthProvider = ({ children }: Props) => {
 		if (!window.ethereum) {
 			// Metamask exists
 			alert("Debes instalar Metamask para poder usar esta app [REDIRIGIR A PÁGINA INSTALACIÓN METAMASK]");
-			// Redirect
+			// Redirect to [install metamask]
 		}
 		return () => {};
 	}, []);
@@ -21,10 +21,13 @@ const Web3AuthProvider = ({ children }: Props) => {
 		user,
 		login() {
 			if (window.ethereum) {
-				// Metamask exists
-				alert("Funcionaaaaa");
+				// Exists metamask
+				window.ethereum.request({ method: "eth_requestAccounts" }).then((res: any) => {
+					const ethereumAccount = res[0];
+					console.log(ethereumAccount);
+				});
 			} else {
-				alert("Debes tener instalado metamask");
+				alert("Debes tener instalada y activada el pluggin de Metamask");
 			}
 		},
 	};
