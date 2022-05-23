@@ -4,7 +4,11 @@ import TaskBar from "../components/system/TaskBar";
 
 const Window = () => {
 	return (
-		<Container fluid id="windowBackground" className="vh-100 bg-dark p-0 text-light">
+		<Container
+			fluid
+			id="windowBackground"
+			className="vh-100 bg-dark p-0 text-light"
+		>
 			<AppsContainer />
 			<TaskBar />
 		</Container>
