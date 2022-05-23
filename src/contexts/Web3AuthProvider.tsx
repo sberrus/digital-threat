@@ -35,7 +35,7 @@ const Web3AuthProvider = ({ children }: Web3ContextComponentProps) => {
 					.request({ method: "eth_requestAccounts" })
 					.then((res: any) => {
 						const ethereumAccount = res[0];
-						console.log(ethereumAccount);
+						setWallet(ethereumAccount);
 					});
 			} else {
 				alert("Debes tener instalada y activada el pluggin de Metamask");

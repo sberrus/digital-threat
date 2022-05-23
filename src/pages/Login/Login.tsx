@@ -1,17 +1,23 @@
+// React
 import { FC, useState } from "react";
+// React-bootstrap
 import { Button, Container } from "react-bootstrap";
+// web3context
+import UseWeb3Auth from "../../contexts/UseWeb3Auth";
+// assets
 import NeonFloor from "../../assets/gif/NeonFloor.gif";
 import MetamaskLogo from "../../assets/gif/MetamaskLogo.gif";
-import UseWeb3Auth from "../../contexts/UseWeb3Auth";
+import BeachInsideCar from "../../assets/gif/BeachInsideCar.gif";
+import context from "react-bootstrap/esm/AccordionContext";
 
 const Login: FC = () => {
 	const [isLogingIn, setIsLogingIn] = useState<boolean>(false);
 
 	const useWeb3Context = UseWeb3Auth();
 
-	const connectWallet = ()=>{
-		useWeb3Context.
-	}
+	const connectWallet = () => {
+		useWeb3Context?.login();
+	};
 
 	const handleLoginInFlag = () => {
 		setIsLogingIn((prev) => !prev);
@@ -40,11 +46,12 @@ const Login: FC = () => {
 					}}
 				>
 					<img
-						src={NeonFloor}
+						src={isLogingIn ? BeachInsideCar : NeonFloor}
 						alt="background GIF retro"
 						style={{
 							width: "100%",
 							height: "100%",
+							transition: "all 1s",
 						}}
 					/>
 				</div>
@@ -70,7 +77,7 @@ const Login: FC = () => {
 						transition: "all .5s",
 					}}
 				>
-					{isLogingIn ? (
+					{useWeb3Context?.wallet ? (
 						<Container
 							id="loginContainer"
 							style={{
