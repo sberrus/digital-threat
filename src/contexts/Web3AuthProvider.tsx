@@ -33,10 +33,6 @@ const Web3AuthProvider = ({ children }: Web3ContextComponentProps) => {
 			// Redirect to [install metamask]
 		}
 
-		if (!wallet.active) {
-			navigate("/");
-		}
-
 		return () => {};
 	}, []);
 

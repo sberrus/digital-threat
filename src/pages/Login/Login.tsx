@@ -11,26 +11,12 @@ import BeachInsideCar from "../../assets/gif/BeachInsideCar.gif";
 import { useNavigate } from "react-router-dom";
 
 const Login: FC = () => {
-	const [isLogingIn, setIsLogingIn] = useState<boolean>(false);
-
 	const web3Context = UseWeb3Auth();
 
 	const navigate = useNavigate();
 
-	useEffect(() => {
-		if (web3Context?.wallet) {
-			navigate("/window");
-		}
-		return () => {};
-	}, []);
-
 	const connectWallet = () => {
 		web3Context?.login();
-		navigate("/window");
-	};
-
-	const handleLoginInFlag = () => {
-		setIsLogingIn((prev) => !prev);
 	};
 
 	return (
@@ -56,7 +42,7 @@ const Login: FC = () => {
 					}}
 				>
 					<img
-						src={isLogingIn ? BeachInsideCar : NeonFloor}
+						src={BeachInsideCar}
 						alt="background GIF retro"
 						style={{
 							width: "100%",
@@ -65,7 +51,7 @@ const Login: FC = () => {
 						}}
 					/>
 				</div>
-				{/* MetamaskButton */}
+				{/* Metamask Login Container */}
 				<div
 					style={{
 						background: "#fff",
@@ -73,89 +59,82 @@ const Login: FC = () => {
 						display: "flex",
 						flexDirection: "column",
 						alignContent: "center",
-						justifyContent: isLogingIn ? "start" : "center",
-						width: isLogingIn ? "25em" : "15em",
-						height: isLogingIn ? "25em" : "15em",
+						justifyContent: "start",
+						width: "25em",
+						height: "25em",
 						overflow: "hidden",
 						zIndex: "0",
 						bottom: "0",
 						left: "0",
-						margin: isLogingIn ? "0" : "3em",
-						borderRadius: isLogingIn ? "0" : "50rem",
-						borderTopRightRadius: isLogingIn ? "30%" : "50rem",
+						margin: "0",
+						borderRadius: "0",
+						borderTopRightRadius: "30%",
 						boxShadow: "rgb(255 255 255 / 63%) 0px 0px 40px",
 						transition: "all .5s",
 					}}
 				>
-					{web3Context?.wallet?.active ? (
-						<Container
-							id="loginContainer"
-							style={{
-								position: "relative",
-								display: "flex",
-								flexDirection: "column",
-								height: "100%",
-							}}
-						>
-							<header>
-								<div
-									id="imgContainer"
-									style={{
-										position: "relative",
-										top: "0",
-										left: "-40px",
-										width: "10em",
-									}}
-								>
-									<button
-										onClick={handleLoginInFlag}
-										style={{
-											height: "100%",
-											width: "100%",
-											background: "inherit",
-											margin: "auto",
-											border: "none",
-										}}
-									>
-										<img
-											src={MetamaskLogo}
-											alt="Metamask gif logo"
-											style={{ width: "100%" }}
-										/>
-									</button>
-								</div>
-							</header>
-							<main
+					<Container
+						style={{
+							position: "relative",
+							display: "flex",
+							flexDirection: "column",
+							height: "100%",
+						}}
+					>
+						<header style={{ height: "30%" }}>
+							{/* Logo holder */}
+							<div
 								style={{
+									background: "inherit",
+									border: "none",
 									height: "100%",
 									display: "flex",
-									alignItems: "center",
-									justifyContent: "center",
 								}}
 							>
-								<Button variant="dark" onClick={connectWallet}>
-									Conectar Wallet
-								</Button>
-							</main>
-						</Container>
-					) : (
-						<button
-							onClick={handleLoginInFlag}
+								<img
+									src={MetamaskLogo}
+									alt="Metamask gif logo"
+									style={{ height: "100%", margin: "auto" }}
+								/>
+							</div>
+						</header>
+						{/* Body Content */}
+						<main
 							style={{
 								height: "100%",
-								width: "100%",
-								background: "inherit",
-								margin: "auto",
-								border: "none",
+								display: "flex",
+								alignItems: "center",
+								justifyContent: "center",
+								flexDirection: "column",
 							}}
 						>
-							<img
-								src={MetamaskLogo}
-								alt="Metamask gif logo"
-								style={{ width: "100%" }}
-							/>
-						</button>
-					)}
+							{web3Context?.wallet?.active ? (
+								<>
+									<h3>Walet Conectada </h3>
+									<small className="m-2">
+										<b>{web3Context.wallet.walletHash}</b>
+									</small>
+									<Button
+										variant="dark"
+										onClick={() => {
+											navigate("/window");
+										}}
+									>
+										Ir a Virtual Machine
+									</Button>{" "}
+								</>
+							) : (
+								<Button
+									variant="dark"
+									onClick={() => {
+										connectWallet();
+									}}
+								>
+									Conectar Wallet
+								</Button>
+							)}
+						</main>
+					</Container>
 				</div>
 			</Container>
 		</>
