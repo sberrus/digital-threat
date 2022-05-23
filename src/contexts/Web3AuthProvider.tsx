@@ -1,19 +1,17 @@
 import { createContext, useEffect, useState } from "react";
-export const Web3AuthContext = createContext({});
+import { Web3ContextComponentProps, Web3ContextType } from "./types/types";
 
-type Props = {
-	children: JSX.Element;
-};
+export const Web3AuthContext = createContext<Web3ContextType | null>(null);
 
-const Web3AuthProvider = ({ children }: Props) => {
-	const [user, setUser] = useState(null);
+const Web3AuthProvider = ({ children }: Web3ContextComponentProps) => {
+	const [wallet, setWallet] = useState<string | null>(null);
 
 	/**
 	 * todo: Dependiendo el nft que tengas de thema, crear un state para controlar los estados de transferencia de archivos
 	 * desc: Crear un proceso que verifique los nfts que tenga adquiridos el cliente actual.
-	 * Dependiendo de los estilos que tenga habilitados/adquiridos, realizar el proceso de descarga y cacheado del archivo. 
-	 * 
-	 * Primero leer el nft que tenga adquirido el cliente. De tener varios permitir elegir entre los que tenga y 
+	 * Dependiendo de los estilos que tenga habilitados/adquiridos, realizar el proceso de descarga y cacheado del archivo.
+	 *
+	 * Primero leer el nft que tenga adquirido el cliente. De tener varios permitir elegir entre los que tenga y
 	 *
 	 */
 
@@ -29,7 +27,7 @@ const Web3AuthProvider = ({ children }: Props) => {
 	}, []);
 
 	let contextValue = {
-		user,
+		wallet,
 		login() {
 			if (window.ethereum) {
 				// Exists metamask
