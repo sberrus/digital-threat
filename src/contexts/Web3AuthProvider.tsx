@@ -1,10 +1,19 @@
 import { createContext, useEffect, useState } from "react";
-import { Web3ContextComponentProps, Web3ContextType } from "./types/types";
+import { useNavigate } from "react-router-dom";
+import {
+	WalletType,
+	Web3ContextComponentProps,
+	Web3ContextType,
+} from "./types/types";
 
 export const Web3AuthContext = createContext<Web3ContextType | null>(null);
 
 const Web3AuthProvider = ({ children }: Web3ContextComponentProps) => {
-	const [wallet, setWallet] = useState<string | null>(null);
+	const navigate = useNavigate();
+	const [wallet, setWallet] = useState<WalletType>({
+		active: false,
+		walletHash: null,
+	});
 
 	/**
 	 * todo: Dependiendo el nft que tengas de thema, crear un state para controlar los estados de transferencia de archivos
@@ -23,6 +32,11 @@ const Web3AuthProvider = ({ children }: Web3ContextComponentProps) => {
 			);
 			// Redirect to [install metamask]
 		}
+
+		if (!wallet.active) {
+			navigate("/");
+		}
+
 		return () => {};
 	}, []);
 
@@ -35,7 +49,7 @@ const Web3AuthProvider = ({ children }: Web3ContextComponentProps) => {
 					.request({ method: "eth_requestAccounts" })
 					.then((res: any) => {
 						const ethereumAccount = res[0];
-						setWallet(ethereumAccount);
+						setWallet({ active: true, walletHash: ethereumAccount });
 					});
 			} else {
 				alert("Debes tener instalada y activada el pluggin de Metamask");

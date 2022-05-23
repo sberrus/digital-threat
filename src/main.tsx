@@ -7,10 +7,10 @@ import Web3AuthProvider from "./contexts/Web3AuthProvider";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
 	<React.StrictMode>
-		<Web3AuthProvider>
-			<BrowserRouter>
+		<BrowserRouter>
+			<Web3AuthProvider>
 				<App />
-			</BrowserRouter>
-		</Web3AuthProvider>
+			</Web3AuthProvider>
+		</BrowserRouter>
 	</React.StrictMode>
 );

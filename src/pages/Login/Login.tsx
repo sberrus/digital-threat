@@ -1,5 +1,5 @@
 // React
-import { FC, useState } from "react";
+import { FC, useEffect, useState } from "react";
 // React-bootstrap
 import { Button, Container } from "react-bootstrap";
 // web3context
@@ -8,15 +8,25 @@ import UseWeb3Auth from "../../contexts/UseWeb3Auth";
 import NeonFloor from "../../assets/gif/NeonFloor.gif";
 import MetamaskLogo from "../../assets/gif/MetamaskLogo.gif";
 import BeachInsideCar from "../../assets/gif/BeachInsideCar.gif";
-import context from "react-bootstrap/esm/AccordionContext";
+import { useNavigate } from "react-router-dom";
 
 const Login: FC = () => {
 	const [isLogingIn, setIsLogingIn] = useState<boolean>(false);
 
-	const useWeb3Context = UseWeb3Auth();
+	const web3Context = UseWeb3Auth();
+
+	const navigate = useNavigate();
+
+	useEffect(() => {
+		if (web3Context?.wallet) {
+			navigate("/window");
+		}
+		return () => {};
+	}, []);
 
 	const connectWallet = () => {
-		useWeb3Context?.login();
+		web3Context?.login();
+		navigate("/window");
 	};
 
 	const handleLoginInFlag = () => {
@@ -77,7 +87,7 @@ const Login: FC = () => {
 						transition: "all .5s",
 					}}
 				>
-					{useWeb3Context?.wallet ? (
+					{web3Context?.wallet?.active ? (
 						<Container
 							id="loginContainer"
 							style={{
