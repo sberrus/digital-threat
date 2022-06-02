@@ -8,13 +8,17 @@ const MainMenu = () => {
 			className="h-100 d-flex align-items-center justify-content-center border-end border-success"
 		>
 			<button
-				className="h-100 bg-dark border border-success p-2  d-flex align-items-end justify-content-center"
+				className="h-100 w-100 bg-dark p-2 d-flex align-items-end justify-content-center"
 				style={{
 					border: "none",
 				}}
 				type="button"
 			>
-				<img src={DigitalThreatLogo} alt="Digital Threat Logo" style={{ height: "80%" }} />
+				<img
+					src={DigitalThreatLogo}
+					alt="Digital Threat Logo"
+					style={{ height: "85%", marginRight: ".4em" }}
+				/>
 				<span className="text-success fw-bold">HOME</span>
 			</button>
 		</Col>

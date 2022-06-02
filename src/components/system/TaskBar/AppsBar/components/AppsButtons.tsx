@@ -6,7 +6,7 @@ type AppsButtonProps = {
 
 const AppsButtons = ({ logoRoute }: AppsButtonProps) => {
 	return (
-		<Button variant="outline-success" className="h-100 ms-1">
+		<Button variant="outline-success" className="h-100 ms-2">
 			<img src={logoRoute} alt="sample Image" style={{ height: "100%" }} />
 		</Button>
 	);
