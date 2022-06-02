@@ -1,14 +1,10 @@
 import { Container } from "react-bootstrap";
 import AppsContainer from "../components/system/AppsContainer";
-import TaskBar from "../components/system/TaskBar";
+import TaskBar from "../components/system/TaskBar/TaskBar";
 
 const Window = () => {
 	return (
-		<Container
-			fluid
-			id="windowBackground"
-			className="vh-100 bg-dark p-0 text-light"
-		>
+		<Container fluid id="windowBackground" className="vh-100 bg-dark p-0 text-light">
 			<AppsContainer />
 			<TaskBar />
 		</Container>

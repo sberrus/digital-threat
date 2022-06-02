@@ -1,4 +1,4 @@
-import UseWeb3Auth from "../../../contexts/UseWeb3Auth";
+import UseWeb3Auth from "../../../../../contexts/UseWeb3Auth";
 import MetamaskLogo from "./assets/MetamaskLogo.svg";
 
 const Web3Connector = () => {
@@ -12,9 +12,9 @@ const Web3Connector = () => {
 		<>
 			<button
 				onClick={() => {
-					alert();
+					alert("Holi");
 				}}
-				className="w-auto h-100 bg-dark"
+				className="h-100 bg-dark"
 				style={{ border: "none" }}
 			>
 				<img src={MetamaskLogo} alt="Metamask Logo" />
