@@ -1,6 +1,5 @@
-import { Col, Container, Row } from "react-bootstrap";
+import { Container, Row } from "react-bootstrap";
 import MainMenu from "./MainMenu/MainMenu";
-import Web3Connector from "./DateAndWidget/Web3Connector/Web3Connector";
 import AppsBar from "./AppsBar/AppsBar";
 import DateAndWidget from "./DateAndWidget/DateAndWidget";
 

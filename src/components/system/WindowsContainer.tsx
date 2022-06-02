@@ -1,11 +1,11 @@
 import { Container } from "react-bootstrap";
 
-const AppsContainer = () => {
+const WindowsContainer = () => {
 	return (
 		<Container fluid className="p-0" style={{ height: "95%" }}>
-			AppsContainer
+			WindowsContainer
 		</Container>
 	);
 };
 
-export default AppsContainer;
+export default WindowsContainer;

@@ -12,7 +12,7 @@ const Web3Connector = () => {
 		<>
 			<button
 				onClick={() => {
-					alert("Holi");
+					alert();
 				}}
 				className="h-100 bg-dark"
 				style={{ border: "none" }}
