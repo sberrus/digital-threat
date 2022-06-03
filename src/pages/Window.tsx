@@ -1,5 +1,5 @@
 import { Container } from "react-bootstrap";
-import WindowsContainer from "../components/system/WindowsContainer";
+import WindowsContainer from "../components/system/WindowContainer/WindowsContainer";
 import TaskBar from "../components/system/TaskBar/TaskBar";
 import UseWeb3Auth from "../contexts/UseWeb3Auth";
 import { useEffect } from "react";
