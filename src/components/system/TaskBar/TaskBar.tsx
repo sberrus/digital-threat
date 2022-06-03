@@ -5,7 +5,7 @@ import DateAndWidget from "./DateAndWidget/DateAndWidget";
 
 const TaskBar = () => {
 	return (
-		<Container fluid className="border-top border-success" style={{ height: "5%" }}>
+		<Container fluid className="border-top border-success" style={{ height: "7%" }}>
 			<Row className="h-100">
 				<MainMenu />
 				<AppsBar />
