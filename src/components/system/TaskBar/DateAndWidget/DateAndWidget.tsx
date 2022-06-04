@@ -3,13 +3,15 @@ import Web3Connector from "./Web3Connector/Web3Connector";
 
 const DateAndWidget = () => {
 	return (
-		<Col
+		<div
 			id="walletAndData"
-			sm={2}
-			className="h-100 d-flex align-items-center justify-content-center border-start border-success"
+			style={{
+				width: "25%",
+				border: "1px solid red",
+			}}
 		>
 			<Web3Connector />
-		</Col>
+		</div>
 	);
 };
 

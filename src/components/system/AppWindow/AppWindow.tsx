@@ -18,6 +18,7 @@ const AppWindow = () => {
 				zIndex: "1",
 				background: "#1d1d1d",
 				border: "1px solid green",
+				boxShadow: "inset 0px 0px 2px #00FF17",
 			}}
 		>
 			{/* APP`S UPPERBAR */}

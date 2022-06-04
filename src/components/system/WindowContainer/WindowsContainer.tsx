@@ -8,7 +8,7 @@ const WindowsContainer = () => {
 			fluid
 			className="p-0"
 			id="WindowsContainer"
-			style={{ height: "93%", position: "relative" }}
+			style={{ height: "95%", position: "relative" }}
 		>
 			<WindowBackgroundImageController />
 			<AppWindow />

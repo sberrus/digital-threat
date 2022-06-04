@@ -17,7 +17,7 @@ const Window = () => {
 	}, []);
 
 	return (
-		<Container fluid id="windowBackground" className="vh-100 bg-dark p-0 text-light">
+		<Container fluid id="windowBackground" className="vh-100 p-0 text-light bg-dark">
 			<WindowsContainer />
 			<TaskBar />
 		</Container>

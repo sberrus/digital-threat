@@ -14,13 +14,13 @@ const SizingButtons = () => {
 			}}
 		>
 			<button style={buttonStyles}>
-				<img src={minimize} alt="" style={{ height: "70%" }} />
+				<img src={minimize} alt="" style={buttonIcons} />
 			</button>
 			<button style={buttonStyles}>
-				<img src={fullScreen} alt="" style={{ height: "70%" }} />
+				<img src={fullScreen} alt="" style={buttonIcons} />
 			</button>
 			<button style={buttonStyles}>
-				<img src={close} alt="" style={{ height: "70%" }} />
+				<img src={close} alt="" style={buttonIcons} />
 			</button>
 		</section>
 	);
@@ -32,9 +32,13 @@ const buttonStyles: CSSProperties = {
 	display: "flex",
 	alignItems: "center",
 	justifyContent: "center",
-	background: "#1d1d1d",
+	background: "#00000000",
 	color: "green",
 	border: "none",
 	height: "100%",
 	marginRight: ".2em",
+};
+
+const buttonIcons: CSSProperties = {
+	height: "70%",
 };
