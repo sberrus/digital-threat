@@ -14,13 +14,13 @@ const SizingButtons = () => {
 			}}
 		>
 			<button style={buttonStyles}>
-				<img src={minimize} alt="" style={{ height: "45%" }} />
+				<img src={minimize} alt="" style={{ height: "70%" }} />
 			</button>
 			<button style={buttonStyles}>
-				<img src={fullScreen} alt="" style={{ height: "45%" }} />
+				<img src={fullScreen} alt="" style={{ height: "70%" }} />
 			</button>
 			<button style={buttonStyles}>
-				<img src={close} alt="" style={{ height: "45%" }} />
+				<img src={close} alt="" style={{ height: "70%" }} />
 			</button>
 		</section>
 	);

@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "preview": "firebase hosting:channel:deploy diegoputo"
+    "preview": "firebase hosting:channel:deploy preview"
   },
   "dependencies": {
     "bootstrap": "5.1.3",

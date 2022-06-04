@@ -11,9 +11,7 @@ const WindowUpperBar = () => {
 				height: "2.3em",
 			}}
 		>
-			{/* Home Button */}
 			<section id="home">home</section>
-			{/* WindowUpperBar Sizing Buttons */}
 			<SizingButtons />
 		</div>
 	);
