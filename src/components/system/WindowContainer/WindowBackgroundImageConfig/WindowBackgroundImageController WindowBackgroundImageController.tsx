@@ -24,10 +24,11 @@ const WindowBackgroundImageConfig = () => {
 				left: "0",
 				top: "0",
 				backgroundImage: `url(${windowSystemConfig.backgroundImage.route})`,
-				backgroundSize: "100%",
+				backgroundSize: "cover",
 				backgroundRepeat: "no-repeat",
 				backgroundPosition: "center",
 				overflow: "hidden",
+				zIndex: "0",
 			}}
 		>
 			{/* <img src={windowSystemConfig.backgroundImage.route} alt="" style={{ width: "100%" }} /> */}

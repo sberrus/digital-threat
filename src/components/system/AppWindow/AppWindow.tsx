@@ -1,3 +1,5 @@
+import WindowUpperBar from "./WindowUpperBar/WindowUpperBar";
+
 const AppWindow = () => {
 	// GET THE CONFIG FOR THE APP
 	// 1: Initial layout screen | modal
@@ -5,8 +7,21 @@ const AppWindow = () => {
 	//      if modal:   ["modal-start" "modal-end"] // los modales no tendrán barra superior y ocuparan todo el espacio de alto.
 
 	return (
-		<div id="AppWindow" style={{}}>
+		<div
+			id="AppWindow"
+			style={{
+				position: "absolute",
+				width: "25%",
+				height: "75%",
+				bottom: "0",
+				right: "0",
+				zIndex: "1",
+				background: "#1d1d1d",
+				border: "1px solid green",
+			}}
+		>
 			{/* APP`S UPPERBAR */}
+			<WindowUpperBar />
 			{/* APP`S BODY */}
 			{/* APP`S FOOTER */}
 		</div>

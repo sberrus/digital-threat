@@ -1,4 +1,5 @@
 import { Container } from "react-bootstrap";
+import AppWindow from "../AppWindow/AppWindow";
 import WindowBackgroundImageController from "./WindowBackgroundImageConfig/WindowBackgroundImageController WindowBackgroundImageController";
 
 const WindowsContainer = () => {
@@ -10,6 +11,7 @@ const WindowsContainer = () => {
 			style={{ height: "93%", position: "relative" }}
 		>
 			<WindowBackgroundImageController />
+			<AppWindow />
 		</Container>
 	);
 };
