@@ -1,0 +1,7 @@
+<svg width="5" height="100" viewBox="0 0 5 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+<line x1="2.5" x2="2.5" y2="100" stroke="#00FF17"/>
+<line x1="1.5" y1="2.94116" x2="1.5" y2="97.0588" stroke="#00FF17" stroke-opacity="0.5"/>
+<line x1="3.5" y1="2.94116" x2="3.5" y2="97.0588" stroke="#00FF17" stroke-opacity="0.5"/>
+<line x1="4.5" y1="5.88232" x2="4.5" y2="94.1176" stroke="#00FF17" stroke-opacity="0.25"/>
+<line x1="0.5" y1="5.88232" x2="0.5" y2="94.1176" stroke="#00FF17" stroke-opacity="0.25"/>
+</svg>

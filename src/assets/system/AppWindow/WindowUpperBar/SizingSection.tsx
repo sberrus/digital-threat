@@ -2,8 +2,9 @@ import { CSSProperties } from "react";
 import minimize from "./assets/minimize.svg";
 import fullScreen from "./assets/fullScreen.svg";
 import close from "./assets/close.svg";
+import arrow from "./assets/arrow.svg";
 
-const SizingButtons = () => {
+const SizingSection = () => {
 	return (
 		<section
 			id="sizing"
@@ -13,6 +14,9 @@ const SizingButtons = () => {
 				justifyContent: "space-between",
 			}}
 		>
+			<button style={buttonStyles}>
+				<img src={arrow} alt="" style={buttonIcons} />
+			</button>
 			<button style={buttonStyles}>
 				<img src={minimize} alt="" style={buttonIcons} />
 			</button>
@@ -26,7 +30,7 @@ const SizingButtons = () => {
 	);
 };
 
-export default SizingButtons;
+export default SizingSection;
 
 const buttonStyles: CSSProperties = {
 	display: "flex",
