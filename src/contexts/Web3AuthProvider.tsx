@@ -25,6 +25,7 @@ const Web3AuthProvider = ({ children }: Web3ContextComponentProps) => {
 	 */
 
 	useEffect(() => {
+		// Comprobar si tiene metamask Instalado
 		if (!window.ethereum) {
 			// Metamask exists
 			alert(
@@ -33,6 +34,9 @@ const Web3AuthProvider = ({ children }: Web3ContextComponentProps) => {
 			// Redirect to [install metamask]
 		}
 
+		if (wallet.active) {
+			navigate("/window");
+		}
 		return () => {};
 	}, []);
 

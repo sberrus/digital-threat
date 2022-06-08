@@ -11,10 +11,11 @@ export const WindowControllerContext =
 
 const WindowControllerProvider = ({
 	children,
+	windowLayoutState,
 }: WindowControllerComponentProps) => {
 	const navigate = useNavigate();
 	const [settings, setSettings] = useState<SettingsType>({
-		windowLayoutState: "window",
+		windowLayoutState,
 	});
 
 	const minimizeWindow = () => {

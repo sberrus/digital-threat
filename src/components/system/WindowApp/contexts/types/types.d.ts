@@ -1,4 +1,7 @@
+export type WindowLayoutType = "fullscreen" | "window" | "minimized";
+
 export type WindowControllerComponentProps = {
+	windowLayoutState: WindowLayoutType;
 	children: JSX.Element | JSX.Element[];
 };
 
@@ -8,7 +11,7 @@ export type AppInfoType = {
 };
 
 export type SettingsType = {
-	windowLayoutState: "fullscreen" | "window" | "minimized";
+	windowLayoutState: WindowLayoutType;
 	appInfo?: AppInfoType;
 };
 

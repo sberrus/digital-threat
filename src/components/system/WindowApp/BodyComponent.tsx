@@ -1,7 +1,13 @@
+import { ReactFragment } from "react";
 import useWindowController from "./contexts/UseWindowController";
 import WindowUpperBar from "./WindowUpperBar/WindowUpperBar";
 
-const BodyComponent = ({ appName }: { appName: string }) => {
+type BodyComponentProps = {
+	appName: string;
+	children: JSX.Element | ReactFragment;
+};
+
+const BodyComponent = ({ appName, children }: BodyComponentProps) => {
 	const windowController = useWindowController();
 	return (
 		<div
@@ -20,7 +26,9 @@ const BodyComponent = ({ appName }: { appName: string }) => {
 						? "100%"
 						: "75%",
 				bottom: "0",
-				right: "0",
+				opacity:
+					windowController?.settings.windowLayoutState === "minimized" &&
+					"0",
 				zIndex: "0",
 				background: "#1d1d1d",
 				border: "1px solid green",
@@ -32,10 +40,7 @@ const BodyComponent = ({ appName }: { appName: string }) => {
 			{/* APP`S UPPERBAR */}
 			<WindowUpperBar />
 			{/* APP`S BODY */}
-			<div id="appBodyComponent">
-				<h5>{appName}</h5>
-				<input className="border border-danger w-100" />
-			</div>
+			<div id={appName}>{children}</div>
 			{/* APP`S FOOTER */}
 		</div>
 	);

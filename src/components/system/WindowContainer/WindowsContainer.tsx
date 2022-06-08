@@ -1,5 +1,5 @@
 import { Container } from "react-bootstrap";
-import AppWindow from "../AppWindow/AppWindow";
+import WindowApp from "../WindowApp/WindowApp";
 import WindowBackgroundImageController from "./WindowBackgroundImageConfig/WindowBackgroundImageController WindowBackgroundImageController";
 
 const WindowsContainer = () => {
@@ -10,10 +10,10 @@ const WindowsContainer = () => {
 			id="WindowsContainer"
 			style={{ height: "95%", position: "relative" }}
 		>
-			{/* CONTEXTProvider */}
 			<WindowBackgroundImageController />
-			<AppWindow appName={"App1"} />
-			<AppWindow appName={"App2"} />
+			<WindowApp appName={"Identifier"} windowLayoutState="fullscreen">
+				<h1>APP</h1>
+			</WindowApp>
 		</Container>
 	);
 };
