@@ -5,7 +5,6 @@ import { Button, Container } from "react-bootstrap";
 // web3context
 import UseWeb3Auth from "../../contexts/UseWeb3Auth";
 // assets
-import NeonFloor from "../../assets/gif/NeonFloor.gif";
 import MetamaskLogo from "../../assets/gif/MetamaskLogo.gif";
 import BeachInsideCar from "../../assets/gif/BeachInsideCar.gif";
 import { useNavigate } from "react-router-dom";
