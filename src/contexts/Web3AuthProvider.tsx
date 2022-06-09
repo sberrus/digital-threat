@@ -34,9 +34,13 @@ const Web3AuthProvider = ({ children }: Web3ContextComponentProps) => {
 			// Redirect to [install metamask]
 		}
 
-		if (wallet.active) {
+		// check if user have already a wallet connected
+		if (localStorage.getItem("wallet")) {
+			const savedWallet = localStorage.getItem("wallet");
+			setWallet(JSON.parse(savedWallet));
 			navigate("/window");
 		}
+
 		return () => {};
 	}, []);
 
@@ -49,7 +53,9 @@ const Web3AuthProvider = ({ children }: Web3ContextComponentProps) => {
 					.request({ method: "eth_requestAccounts" })
 					.then((res: any) => {
 						const ethereumAccount = res[0];
-						setWallet({ active: true, walletHash: ethereumAccount });
+						const payload = { active: true, walletHash: ethereumAccount };
+						setWallet(payload);
+						localStorage.setItem("wallet", JSON.stringify(payload));
 					});
 			} else {
 				alert("Debes tener instalada y activada el pluggin de Metamask");
