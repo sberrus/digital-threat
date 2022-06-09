@@ -3,7 +3,7 @@ import BodyComponent from "./BodyComponent";
 import { WindowLayoutType } from "./contexts/types/types";
 import WindowControllerProvider from "./contexts/WindowController";
 
-type WindowAppProps = {
+type WindowAppContainerProps = {
 	appName: string;
 	children: JSX.Element | ReactFragment;
 	windowLayoutState: WindowLayoutType;
@@ -16,11 +16,11 @@ type WindowAppProps = {
  * @param appName WindowApp identifier
  * @returns WindowAppWindow instance
  */
-const WindowApp = ({
+const WindowAppContainer = ({
 	appName,
 	children,
 	windowLayoutState,
-}: WindowAppProps) => {
+}: WindowAppContainerProps) => {
 	// GET THE CONFIG FOR THE APP
 	// 1: Initial layout screen | modal
 	// 1.1: if screen : ["fullscreen" "half-screen-start" "half-screen-end"] // las ventanas deben ser flexibles respecto a las dimensiones de la misma.
@@ -33,4 +33,4 @@ const WindowApp = ({
 	);
 };
 
-export default WindowApp;
+export default WindowAppContainer;
