@@ -35,11 +35,11 @@ const Web3AuthProvider = ({ children }: Web3ContextComponentProps) => {
 		}
 
 		// check if user have already a wallet connected
-		if (localStorage.getItem("wallet")) {
-			const savedWallet = localStorage.getItem("wallet");
-			setWallet(JSON.parse(savedWallet));
-			navigate("/window");
-		}
+		// if (localStorage.getItem("wallet")) {
+		// 	const savedWallet = localStorage.getItem("wallet");
+		// 	setWallet(JSON.parse(savedWallet));
+		// 	navigate("/window");
+		// }
 
 		return () => {};
 	}, []);
