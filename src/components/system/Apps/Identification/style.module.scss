@@ -2,18 +2,24 @@
 	display: flex;
 	align-items: center;
 	height: 20em;
-	border: 1px solid red;
+	border: 1px solid green;
 	// Profile Picture Container
 	.profilePictureContainer {
 		position: relative;
 		display: flex;
 		align-items: center;
-		overflow: hidden;
-		height: 20em;
+		justify-content: center;
+		height: inherit;
 		width: 25%;
-		img {
-			width: 90%;
-			border: 1px solid red;
+		.profilePictureImgContainer {
+			height: 90%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			img {
+				max-height: 100%;
+				width: 100%;
+			}
 		}
 	}
 	.bannerContainer {
@@ -24,11 +30,24 @@
 		position: relative;
 		overflow: hidden;
 		img {
+			margin: auto;
 			width: auto;
-			border: 1px solid red;
 		}
 	}
 	.configSection {
 		width: 25%;
+		.configSection_buttonHolder {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-direction: column;
+			.buttonHolder_button {
+				height: 3em;
+				width: 80%;
+				margin: 1em 0;
+				background-color: #000;
+				color: green;
+			}
+		}
 	}
 }

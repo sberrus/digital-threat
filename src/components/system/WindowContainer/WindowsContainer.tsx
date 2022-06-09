@@ -1,5 +1,5 @@
 import { Container } from "react-bootstrap";
-import IdentificationApp from "../Apps/Identification/IdentificationApp";
+import IdentificationApp from "../apps/Identification/IdentificationApp";
 import WindowAppContainer from "../WindowApp/WindowApp";
 import WindowBackgroundImageController from "./WindowBackgroundImageConfig/WindowBackgroundImageController WindowBackgroundImageController";
 
