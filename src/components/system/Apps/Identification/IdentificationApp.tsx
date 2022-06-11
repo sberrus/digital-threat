@@ -5,7 +5,7 @@ import style from "./window.module.scss";
 
 const IdentificationApp: FC = () => {
 	return (
-		<div id="identificationApp" className={style.window}>
+		<div className={style.window}>
 			<Header />
 			<Body />
 		</div>

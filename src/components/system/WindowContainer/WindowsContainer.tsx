@@ -13,7 +13,7 @@ const WindowsContainer = () => {
 		>
 			<WindowBackgroundImageController />
 			<WindowAppContainer
-				appName={"Identifier"}
+				appName={"Identification"}
 				windowLayoutState="fullscreen"
 			>
 				<IdentificationApp />

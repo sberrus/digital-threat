@@ -13,7 +13,7 @@ const BodyComponent = ({ appName, children }: BodyComponentProps) => {
 		<div
 			id="AppWindow"
 			style={{
-				position: "absolute",
+				position: "relative",
 				width:
 					windowController?.settings.windowLayoutState === "fullscreen"
 						? "100%"
@@ -41,7 +41,12 @@ const BodyComponent = ({ appName, children }: BodyComponentProps) => {
 			{/* APP`S UPPERBAR */}
 			<WindowUpperBar />
 			{/* APP`S BODY */}
-			<div id={appName}>{children}</div>
+			<div
+				id={appName}
+				style={{ height: "96%", overflow: "none", position: "relative" }}
+			>
+				{children}
+			</div>
 			{/* APP`S FOOTER */}
 		</div>
 	);
