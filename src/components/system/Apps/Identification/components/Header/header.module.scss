@@ -2,15 +2,14 @@
 	display: flex;
 	align-items: center;
 	height: 18em;
-	border: 1px solid green;
 	// NFT PROFILE IMG
 	.profilePictureContainer {
 		position: relative;
 		display: flex;
 		align-items: center;
-		justify-content: center;
+		justify-content: flex-start;
 		height: inherit;
-		width: 25%;
+		width: 15%;
 		.profilePictureImgContainer {
 			height: 75%;
 			display: flex;
@@ -26,7 +25,7 @@
 	.bannerContainer {
 		display: flex;
 		align-items: center;
-		width: 50%;
+		width: 70%;
 		height: 100%;
 		position: relative;
 		overflow: hidden;
@@ -38,16 +37,16 @@
 	}
 	// CONFIG BUTTONS SECTION
 	.configSection {
-		width: 25%;
+		width: 15%;
 		.configSection_buttonHolder {
 			display: flex;
 			align-items: center;
-			justify-content: center;
+			justify-content: flex-end;
 			flex-direction: column;
 			.buttonHolder_button {
 				text-transform: uppercase;
 				height: 3em;
-				width: 50%;
+				width: 100%;
 				margin: 1em 0;
 				background-color: #000;
 				color: green;

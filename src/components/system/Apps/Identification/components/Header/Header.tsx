@@ -21,7 +21,7 @@ const Header: FC = () => {
 				<div className={style.configSection}>
 					<div className={style.configSection_buttonHolder}>
 						<button className={style.buttonHolder_button}>
-							<div> Config</div> <div>[Logo]</div>
+							<div>Config</div> <div>[Logo]</div>
 						</button>
 						<button className={style.buttonHolder_button}>
 							<div>Edit Profile</div> <div>[Logo]</div>
