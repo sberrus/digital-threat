@@ -1,5 +1,5 @@
 import style from "./body.module.scss";
-import CollectionsAndNFT from "./components/CollectionsAndNFT";
+import CollectionsAndNFT from "./components/CollectionsAndNFT/CollectionsAndNFT";
 
 const Body = () => {
 	return (

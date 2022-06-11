@@ -1,14 +1,14 @@
 .header {
 	display: flex;
 	align-items: center;
-	height: 18em;
+	height: 30%;
 	// NFT PROFILE IMG
 	.profilePictureContainer {
 		position: relative;
 		display: flex;
 		align-items: center;
-		justify-content: flex-start;
-		height: inherit;
+		justify-content: center;
+		height: 100%;
 		width: 15%;
 		.profilePictureImgContainer {
 			height: 75%;
@@ -41,7 +41,7 @@
 		.configSection_buttonHolder {
 			display: flex;
 			align-items: center;
-			justify-content: flex-end;
+			justify-content: center;
 			flex-direction: column;
 			.buttonHolder_button {
 				text-transform: uppercase;

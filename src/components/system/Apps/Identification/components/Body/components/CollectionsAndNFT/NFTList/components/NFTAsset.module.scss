@@ -1,0 +1,16 @@
+.NFTContainer {
+	margin-top: 0.5rem;
+	border: 1px solid green;
+	width: 30%;
+	.assetHolder {
+		width: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		box-shadow: 3px 3px 1px green;
+		img {
+			margin: auto;
+			width: 100%;
+		}
+	}
+}

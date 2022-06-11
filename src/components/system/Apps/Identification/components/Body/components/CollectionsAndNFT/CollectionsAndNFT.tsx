@@ -1,7 +1,7 @@
 import { useState } from "react";
-import BadgesList from "./BadgesList";
 import style from "./CollectionsAndNFT.module.scss";
-import NFTList from "./NFTList";
+import NFTList from "./NFTList/NFTList";
+import BadgesList from "./BadgesList/BadgesList";
 
 const CollectionsAndNFT = () => {
 	const [selectedTab, setSelectedTab] = useState("NFT");
@@ -34,7 +34,6 @@ const CollectionsAndNFT = () => {
 					NFT'S
 				</button>
 			</div>
-			{/* assets */}
 			{selectedTab === "NFT" && <NFTList />}
 			{selectedTab === "BADGES" && <BadgesList />}
 		</div>
