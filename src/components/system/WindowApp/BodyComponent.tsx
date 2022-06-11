@@ -27,8 +27,9 @@ const BodyComponent = ({ appName, children }: BodyComponentProps) => {
 						: "75%",
 				bottom: "0",
 				opacity:
-					windowController?.settings.windowLayoutState === "minimized" &&
-					"0",
+					windowController?.settings.windowLayoutState === "minimized"
+						? "0"
+						: "1",
 				zIndex: "0",
 				background: "#1d1d1d",
 				border: "1px solid green",
