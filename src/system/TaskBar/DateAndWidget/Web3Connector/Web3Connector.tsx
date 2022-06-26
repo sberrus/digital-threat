@@ -1,4 +1,4 @@
-import UseWeb3Auth from "../../../../../contexts/UseWeb3Auth";
+import UseWeb3Auth from "../../../../contexts/UseWeb3Auth";
 import MetamaskLogo from "./assets/MetamaskLogo.svg";
 
 const Web3Connector = () => {

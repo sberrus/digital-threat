@@ -4,7 +4,7 @@
  * It only receive the route where the file is, if not cached, downloadit and then cache it.
  */
 
-import image from "../../../../assets/gif/VirtualWave.gif";
+import image from "../../../assets/gif/VirtualWave.gif";
 const WindowBackgroundImageConfig = () => {
 	// todo: get the config from systemConfigContext;
 	const windowSystemConfig = {
