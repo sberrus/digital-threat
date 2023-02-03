@@ -1,7 +1,10 @@
+// imports
 import { useState } from "react";
-import style from "./CollectionsAndNFT.module.scss";
+// components
 import NFTList from "./NFTList/NFTList";
 import BadgesList from "./BadgesList/BadgesList";
+// style
+import style from "./CollectionsAndNFT.module.scss";
 
 const CollectionsAndNFT = () => {
 	const [selectedTab, setSelectedTab] = useState("NFT");
@@ -14,9 +17,7 @@ const CollectionsAndNFT = () => {
 			{/* pestañas */}
 			<div className={style.tabs}>
 				<button
-					className={`${style.tab} ${
-						selectedTab === "BADGES" && style.tabSelected
-					}`}
+					className={`${style.tab} ${selectedTab === "BADGES" && style.tabSelected}`}
 					onClick={() => {
 						handleChangeTab("BADGES");
 					}}
@@ -24,9 +25,7 @@ const CollectionsAndNFT = () => {
 					BADGES
 				</button>
 				<button
-					className={`${style.tab} ${
-						selectedTab === "NFT" && style.tabSelected
-					}`}
+					className={`${style.tab} ${selectedTab === "NFT" && style.tabSelected}`}
 					onClick={() => {
 						handleChangeTab("NFT");
 					}}
